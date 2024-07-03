@@ -1,0 +1,11 @@
+
+version: '3'
+
+services:
+  farm-linux:
+    container_name: farm-linux
+    build: .
+    image: farm-linux:latest
+    restart: always
+    ports:
+      - "3000:80"
