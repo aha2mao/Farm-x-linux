@@ -6,7 +6,17 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      '@farmfe/cli':
+        specifier: ^1.0.2
+        version: 1.0.2
+      '@farmfe/core':
+        specifier: ^1.2.4
+        version: 1.2.5
+      typescript:
+        specifier: ^5.4.3
+        version: 5.5.3
 
   packages/module1:
     devDependencies:

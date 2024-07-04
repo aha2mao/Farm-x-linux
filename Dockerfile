@@ -10,9 +10,10 @@ COPY . /app
 RUN ls -la /app
 RUN pnpm install
 RUN find /app/node_modules/.pnpm -type d -name '@farmfe*'
-RUN pnpm --filter="module1" build
+# RUN pnpm --filter="module1" build
+RUN pnpm build
 
 FROM nginx:alpine
-COPY --from=build /app/packages/module1/dist /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 80/tcp
